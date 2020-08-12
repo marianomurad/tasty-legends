@@ -1,4 +1,4 @@
-function Producto({ name, price, image, url }) {
+function Product({ name, price, image, url }) {
     return (
         <div className="container">
             <a href={url}>
@@ -41,4 +41,4 @@ function Producto({ name, price, image, url }) {
     )
 }
 
-export default Producto
+export default Product

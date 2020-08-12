@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Head from 'next/head'
-import Post from '../components/post'
+import Product from '../components/product'
 
 const client = require('contentful').createClient({
     space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -36,7 +36,7 @@ function HomePage() {
             </Head>
             {posts.length > 0
                 ? posts.map(p => (
-                    <Post
+                    <Product
                         name={p.fields.name}
                         price={p.fields.price}
                         image={p.fields.image}
