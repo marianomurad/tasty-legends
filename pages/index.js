@@ -10,16 +10,17 @@ const client = require('contentful').createClient({
 function HomePage() {
     async function fetchEntries() {
         const entries = await client.getEntries()
+        console.log(entries);
         if (entries.items) return entries.items
         console.log(`Error getting Entries for ${contentType.name}.`)
     }
 
-    const [posts, setPosts] = useState([])
+    const [products, setProducts] = useState([])
 
     useEffect(() => {
         async function getProducts() {
             const allProducts = await fetchEntries()
-            setPosts([...allProducts])
+            setProducts([...allProducts])
         }
         getProducts()
     }, [])
@@ -34,12 +35,13 @@ function HomePage() {
                     type="text/css"
                 />
             </Head>
-            {posts.length > 0
-                ? posts.map(p => (
+            {products.length > 0
+                ? products.map((p, i) => (
                     <Product
+                        key={i}
                         name={p.fields.name}
                         price={p.fields.price}
-                        image={p.fields.image}
+                        image={p.fields.image.fields.file.url}
                         url={p.fields.url}
                     />
                 ))

@@ -2,7 +2,7 @@ function Product({ name, price, image, url }) {
     return (
         <div className="container">
             <a href={url}>
-                <img alt={name} src={image} />
+                <img alt={name} src={image.toString()} />
             </a>
             <div className="text">
                 <h2>{name}</h2>
