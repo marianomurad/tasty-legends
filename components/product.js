@@ -6,7 +6,7 @@ function Product({ name, price, image, url }) {
             </a>
             <div className="text">
                 <h2>{name}</h2>
-                <h4>{price}</h4>
+                <h4>{price} $</h4>
             </div>
             <style jsx>{`
         .container {
