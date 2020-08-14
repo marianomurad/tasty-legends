@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Product from '../components/product'
+import Navigation from "../components/navigation";
 
 const client = require('contentful').createClient({
     space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -10,7 +11,6 @@ const client = require('contentful').createClient({
 function HomePage() {
     async function fetchEntries() {
         const entries = await client.getEntries()
-        console.log(entries);
         if (entries.items) return entries.items
         console.log(`Error getting Entries for ${contentType.name}.`)
     }
@@ -35,6 +35,7 @@ function HomePage() {
                     type="text/css"
                 />
             </Head>
+            <Navigation/>
             {products.length > 0
                 ? products.map((p, i) => (
                     <Product
