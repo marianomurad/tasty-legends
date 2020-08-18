@@ -1,44 +1,42 @@
-import { Nav } from 'rsuite';
+import { Nav, Icon } from 'rsuite';
 import 'rsuite/lib/styles/index.less';
 import NavLink from "./navlink";
 
 const links = [
     {
-        href: '/',
+        href: '',
         title: 'Home',
     },
     {
-        href: '/products',
+        href: 'productos',
         title: 'Productos',
     },
     {
-        href: '/combos',
+        href: 'combos',
         title: 'Combos',
     },
     {
-        href: '/cart',
+        href: 'carrito',
         title: 'Carrito',
+        icon: 'shopping-cart'
     },
 
 ]
 
-const Navigation = () => {
+const Navigation = ({children}) => {
     return (
         <div className="hero">
             <Nav>
                 {links.map(link => {
-                    return (<Nav.Item componentClass={NavLink} href={link.href}>
-                        {link.title}
-                    </Nav.Item>)
+                    return (
+                        <Nav.Item key={link.href} componentClass={NavLink} href={`/${link.href}`} icon={<Icon icon={link.icon}/>}>
+                            {link.title}
+                        </Nav.Item>)
                 })}
             </Nav>
-
+            {children}
 <style jsx>{`
-.hero {
-  width: 100%;
-  color: #333;
-  padding: 50px;
-}
+
 .title {
   margin: 0;
   width: 100%;
