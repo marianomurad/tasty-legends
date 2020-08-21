@@ -1,12 +1,17 @@
-function Product({ name, price, image, url }) {
+import React from "react";
+
+function Product({ name, price, image, url, ingredients }) {
     return (
         <div className="container">
             <a href={url}>
-                <img alt={name} src={image.toString()} />
+                <img alt={name} src={image.toString()} height="400" width="380"/>
             </a>
             <div className="text">
                 <h2>{name}</h2>
                 <h4>{price} $</h4>
+                <p>{ingredients}</p>
+                <button> Comprar</button>
+
             </div>
             <style jsx>{`
         .container {

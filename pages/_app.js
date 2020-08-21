@@ -16,9 +16,16 @@ export default class MyApp extends App {
     render() {
         const { Component, pageProps } = this.props;
         return (
+            <>
             <Navigation>
                         <Component {...pageProps} />
             </Navigation>
+                <style jsx>{`
+                body {
+                   padding: 0 !important; 
+                }`}
+                </style>
+            </>
         )
     }
 }

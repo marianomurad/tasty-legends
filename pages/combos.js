@@ -6,11 +6,6 @@ const Combos = () => {
         <>
             <Head>
                 <title>Tasty Legends</title>
-                <link
-                    rel="stylesheet"
-                    href="https://css.zeit.sh/v1.css"
-                    type="text/css"
-                />
             </Head>
         <div>
             im a combo

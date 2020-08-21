@@ -1,16 +1,10 @@
-import { useEffect, useState } from 'react'
-import Head from 'next/head'
-import { fetchEntries } from "./api/entries";
-import HeroComponent from "../components/hero";
+import React, {useEffect, useState} from 'react';
+import {fetchEntries} from "./api/entries";
+import Head from "next/head";
 import CarouselComponent from "../components/carousel";
 import CardsComponent from "../components/cards";
-import {useRouter} from "next/router";
 
-
-function HomePage() {
-
-    const router = useRouter();
-
+const V1 = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
@@ -22,15 +16,16 @@ function HomePage() {
     }, [])
 
     return (
-        <div style={{display: 'flex', justifyContent: 'space-around', flexDirection: 'row', alignItems: 'center'}}>
+        <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
             <Head>
                 <title>Tasty Legends</title>
             </Head>
             {/*<HeroComponent alt={hero?.fields.name} src={hero?.fields.image.fields.file.url}/>*/}
-            <button onClick={() => router.push('/v1')}> v1</button>|
-            <button onClick={() => router.push('/v2')}> v2</button>
+
+            <h2> Combos </h2>
+            <CarouselComponent products={products}/>
         </div>
     )
 }
 
-export default HomePage
+export default V1;
