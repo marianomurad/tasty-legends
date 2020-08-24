@@ -4,16 +4,14 @@ import NavLink from "./navlink";
 
 const links = [
     {
-        href: '',
-        title: 'Home',
-    },
-    {
         href: 'productos',
         title: 'Productos',
+        icon: ''
     },
     {
         href: 'combos',
         title: 'Combos',
+        icon: ''
     },
     {
         href: 'carrito',
@@ -25,8 +23,12 @@ const links = [
 
 const Navigation = ({children}) => {
     return (
-        <div className="hero">
-            <Nav>
+        <div>
+            <Nav style={{marginTop: 10, marginLeft: 10}}>
+                    <Nav.Item key="logo" componentClass={NavLink} href="/">
+                        <img src='/logo.svg' alt='logo' height="20"/>
+                    </Nav.Item>
+
                 {links.map(link => {
                     return (
                         <Nav.Item key={link.href} componentClass={NavLink} href={`/${link.href}`} icon={<Icon icon={link.icon}/>}>

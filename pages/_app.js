@@ -21,8 +21,12 @@ export default class MyApp extends App {
                         <Component {...pageProps} />
             </Navigation>
                 <style jsx>{`
+                @import url('https://fonts.googleapis.com/css?family=Roboto');
+
                 body {
-                   padding: 0 !important; 
+                   padding: 0 !important;
+                   font-family: 'Roboto', serif;
+                   color: #101010; 
                 }`}
                 </style>
             </>
