@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import { fetchEntries } from "./api/entries";
 import HeroComponent from "../components/hero";
-import CardsComponent from "../components/cards";
+import CardsComponent from "../components/cards/cards";
+import { Divider } from "rsuite";
+import ContactSection from "../components/contact";
 
 
 function HomePage() {
@@ -24,8 +26,11 @@ function HomePage() {
             </Head>
 
             {/*<HeroComponent alt={hero?.fields.name} src={hero?.fields.image.fields.file.url}/>*/}
-            <h2 style={{ color: '#101010',}}> Productos </h2>
+            <Divider>
+                <h2 style={{ color: '#101010'}}> Productos </h2>
+            </Divider>
             <CardsComponent cards={products}/>
+            <ContactSection />
         </div>
     )
 }
