@@ -14,7 +14,8 @@ const CardsComponent = ({cards}) => {
             <Panel key={card.fields.name} shaded bordered bodyFill style={{ width: 300, margin: 10, height: 600 }}>
                 <img alt={card.fields.name} src={card.fields.image.fields.file.url} height="400" />
                 <Panel header={card.fields.name} >
-                    <Message style={cardStyles.msgStyles} type="success" title={`${card.fields.price} $`} />
+                    <div style={{color: '#101010'}}> <strong>{card.fields.price} $</strong></div>
+                    <br/>
                         <Button appearance="ghost" onClick={handleClick}> Comprar </Button>
                 </Panel>
             </Panel>

@@ -8,3 +8,9 @@ export async function fetchEntries() {
     if (entries.items) return entries.items
     console.log(`Error getting Entries for ${contentType.name}.`)
 }
+
+export async function fetchHeroAssets() {
+    const hero = await client.getAssets()
+    if (hero.items) return hero.items
+    console.log(`Error getting Entries for ${contentType.name}.`)
+}

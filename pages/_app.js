@@ -21,13 +21,17 @@ export default class MyApp extends App {
                         <Component {...pageProps} />
             </Navigation>
                 <style jsx>{`
-                @import url('https://fonts.googleapis.com/css?family=Roboto');
+                @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
                 body {
                    padding: 0 !important;
-                   font-family: 'Roboto', serif;
+                   font-family: 'Open Sans', serif !important;
                    color: #101010; 
-                }`}
+                }
+                h1 {
+                   font-family: 'Open Sans';
+                }
+`}
                 </style>
             </>
         )
