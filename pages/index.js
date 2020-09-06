@@ -40,8 +40,21 @@ function HomePage() {
             <CardsComponent cards={products}/>
 
             <Divider style={{ marginTop: 100}}>
-                <h2 style={{ color: '#101010'}}> Crea tu Combo </h2>
+                <h2 style={{ color: '#101010'}}> Crea tu combo </h2>
             </Divider>
+            {/*<ComboMakerComponent/>*/}
+
+
+            <Divider style={{ marginTop: 100}}>
+                <h2 style={{ color: '#101010'}}> Opiniones! </h2>
+            </Divider>
+            {/*<ReviewsComponent/>*/}
+
+            <Divider style={{ marginTop: 100}}>
+                <h2 style={{ color: '#101010'}}> Deja la tuya </h2>
+            </Divider>
+            {/*<OpinionForm/>*/}
+
         </div>
     )
 }

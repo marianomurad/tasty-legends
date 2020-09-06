@@ -9,7 +9,7 @@ const CardsComponent = ({cards}) => {
     }
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', minHeight: '90vh'}}>
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', minHeight: '50vh'}}>
             {cards.map( card => (
             <Panel key={card.fields.name} shaded bordered bodyFill style={{ width: 300, margin: 10, height: 600 }}>
                 <img alt={card.fields.name} src={card.fields.image.fields.file.url} height="400" />
