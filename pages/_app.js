@@ -1,4 +1,4 @@
-import Navigation from "../components/navigation";
+import Navigation from "../components/navigation/navigation";
 import App from "next/app";
 
 export default class MyApp extends App {

@@ -10,7 +10,7 @@ const ContactSection = () => {
     return (
         <div style={{backgroundColor: '#101010', width: '100%', display: 'flex', justifyContent: 'center', bottom: 0}}>
             {icons.map(icon =>
-                <Icon style={{margin: 20, color: 'white'}} size="3x" icon={icon.name} onClick={() => handleClick(icon.url)}/>
+                <Icon key={icon.name} style={{margin: 20, color: 'white'}} size="3x" icon={icon.name} onClick={() => handleClick(icon.url)}/>
             )}
         </div>
     );

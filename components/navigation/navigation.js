@@ -1,7 +1,7 @@
 import { Nav, Icon } from 'rsuite';
 import 'rsuite/lib/styles/index.less';
 import NavLink from "./navlink";
-import ContactSection from "./contact";
+import ContactSection from "../contact";
 
 const links = [
     // {
@@ -9,11 +9,11 @@ const links = [
     //     title: 'Productos',
     //     icon: ''
     // },
-    // {
-    //     href: 'combos',
-    //     title: 'Combos',
-    //     icon: ''
-    // },
+    {
+        href: 'combos',
+        title: 'Combos',
+        icon: ''
+    },
     {
         href: 'carrito',
         // title: 'Carrito',
