@@ -1,5 +1,6 @@
 import Navigation from "../components/navigation/navigation";
 import App from "next/app";
+import {StateProvider} from "../lib/store";
 
 export default class MyApp extends App {
 
@@ -17,9 +18,11 @@ export default class MyApp extends App {
         const { Component, pageProps } = this.props;
         return (
             <>
-            <Navigation>
-                        <Component {...pageProps} />
-            </Navigation>
+            <StateProvider>
+                <Navigation>
+                    <Component {...pageProps} />
+                </Navigation>
+            </StateProvider>
                 <style jsx>{`
                 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
