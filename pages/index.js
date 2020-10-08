@@ -41,7 +41,7 @@ function HomePage() {
     }, [])
 
     return (
-        <div style={{display: 'flex', justifyContent: 'space-around', flexDirection: 'column', alignItems: 'center'}}>
+        <div style={{display: 'flex', justifyContent: 'space-around', flexDirection: 'column', alignItems: 'center', width: '100%'}}>
             <Head>
                 <title>Tasty Legends</title>
             </Head>
@@ -52,14 +52,14 @@ function HomePage() {
             </Divider>
             <CardsComponent cards={burgers}/>
 
-            <Divider style={{ marginTop: 100}}>
-                <h2 style={{ color: '#101010'}}> Compra tu combo </h2>
-            </Divider>
-            <CardsComponent cards={combos}/>
-            <Divider style={{ marginTop: 100}}>
-                <h2 style={{ color: '#101010'}}> o crea tu propio combo! </h2>
-            </Divider>
-            <ComboMakerComponent/>
+            {/*<Divider style={{ marginTop: 100}}>*/}
+            {/*    <h2 style={{ color: '#101010'}}> Compra tu combo </h2>*/}
+            {/*</Divider>*/}
+            {/*<CardsComponent cards={combos}/>*/}
+            {/*<Divider style={{ marginTop: 100}}>*/}
+            {/*    <h2 style={{ color: '#101010'}}> o crea tu propio combo! </h2>*/}
+            {/*</Divider>*/}
+            {/*<ComboMakerComponent/>*/}
 
 
             {/*<Divider style={{ marginTop: 100}}>*/}

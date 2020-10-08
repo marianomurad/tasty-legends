@@ -13,7 +13,7 @@ const HeroComponent = ({alt = 'hero', src = ''}) => {
         .container-hero-text {
           font-family: "Dancing Script";
           color: white;
-          font-size: 100px;
+          font-size: 50px;
           position: absolute;
           top: 30%;
           left: 50%;

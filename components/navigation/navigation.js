@@ -9,11 +9,11 @@ const links = [
     //     title: 'Productos',
     //     icon: ''
     // },
-    {
-        href: 'combos',
-        title: 'Combos',
-        icon: ''
-    },
+    // {
+    //     href: 'combos',
+    //     title: 'Combos',
+    //     icon: ''
+    // },
     {
         href: 'carrito',
         // title: 'Carrito',
@@ -24,19 +24,21 @@ const links = [
 
 const Navigation = ({children}) => {
     return (
-        <div style={{ display: 'flex',alignItems: 'center', flexDirection: 'column'}}>
-            <Nav style={{boxShadow: '0 0 5px 0 #d3d3d3', padding: 5, display: 'flex', justifyContent: 'space-around', alignItems: 'center', width: '100%'}}>
-                    <Nav.Item key="logo" componentClass={NavLink} href="/" style={{ height: 50 }}>
-                        <img src='/logo.svg' alt='logo' height="30"/>
-                    </Nav.Item>
+        <div>
+            <div style={{ boxShadow: '0 0 5px 0 #d3d3d3', padding: 5, display: 'flex', justifyContent: 'space-around', alignItems: 'center', width: '100%'}}>
+                    <ul style={{ display: 'flex', alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', width: '100%', listStyleType: 'none'}}>
+                        <Nav.Item key="logo" componentClass={NavLink} href="/" style={{ height: 50,  }}>
+                            <img src='/logo.svg' alt='logo' height="30"/>
+                        </Nav.Item>
 
-                {links.map(link => {
-                    return (
-                        <Nav.Item style={{ height: 50, justifyContent: 'center'}} key={link.href} componentClass={NavLink} href={`/${link.href}`} icon={<Icon style={{color: 'black', fontSize: 30}} icon={link.icon}/>}>
-                            {link.title}
-                        </Nav.Item>)
-                })}
-            </Nav>
+                    {links.map(link => {
+                        return (
+                            <Nav.Item style={{ height: 50, justifyContent: 'center'}} key={link.href} componentClass={NavLink} href={`/${link.href}`} icon={<Icon style={{color: 'black', fontSize: 30}} icon={link.icon}/>}>
+                                {link.title}
+                            </Nav.Item>)
+                    })}
+                    </ul>
+            </div>
             {children}
             <ContactSection />
         <style jsx>{`

@@ -10,6 +10,7 @@ const configureMercadoPago = () => {
         console.log(error);
     }
 }
+
 configureMercadoPago();
 
 
