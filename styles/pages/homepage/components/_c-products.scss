@@ -1,0 +1,62 @@
+.c-products {
+  &__divider {
+    display: flex;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    color: get-color($theme, 'hero-black')
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 50vh;
+  }
+
+  &__c-card {
+    background-color: get-color($theme, 'pale-white');
+    border: 1px solid get-color($theme, 'light-grey');
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px get-color($theme, 'medium-grey');
+    @include spacing($theme, (default: xxsmall),'padding-bottom');
+    @include spacing($theme, (default: xxsmall, S: zero),'margin-bottom');
+
+    &-btn {
+      background-color: get-color($theme, 'dark-grey');
+      color: get-color($theme, 'pale-white');
+      border: 0px;
+      border-radius: 4px;
+      height: t-rem(35px);
+      width: t-rem(90px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__c-card-image {
+    height: 200px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  &__c-card-main, &__c-card-title {
+    @include spacing($theme, (default: xxsmall),'padding-left');
+  }
+
+  &__c-card-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    @include spacing($theme, (default: xxsmall),'padding-right');
+    @include spacing($theme, (default: xxsmall),'padding-top');
+    border-top: 1px solid get-color($theme, 'medium-grey');
+  }
+}

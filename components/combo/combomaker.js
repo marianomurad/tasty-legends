@@ -1,7 +1,4 @@
-import React from 'react';
-import {Button, Panel} from "rsuite";
 import {whatsappConnector} from "../../lib/utils/contact/helpers";
-import {useRouter} from "next/router";
 import Link from "next/link";
 
 const ComboMakerComponent = () => {
@@ -9,7 +6,7 @@ const ComboMakerComponent = () => {
     return (
         <div>
             <Link href={'/combos'}>
-                <Button appearance="ghost"> Crear! </Button>
+                <button appearance="ghost"> Crear! </button>
             </Link>
         </div>
     );

@@ -1,5 +1,3 @@
-import { Nav, Icon } from 'rsuite';
-import 'rsuite/lib/styles/index.less';
 import NavLink from "./navlink";
 import ContactSection from "../contact";
 
@@ -27,15 +25,17 @@ const Navigation = ({children}) => {
         <div>
             <div style={{ boxShadow: '0 0 5px 0 #d3d3d3', padding: 5, display: 'flex', justifyContent: 'space-around', alignItems: 'center', width: '100%'}}>
                     <ul style={{ display: 'flex', alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', width: '100%', listStyleType: 'none'}}>
-                        <Nav.Item key="logo" componentClass={NavLink} href="/" style={{ height: 50,  }}>
-                            <img src='/logo.svg' alt='logo' height="30"/>
-                        </Nav.Item>
+                        <li key="logo" style={{ height: 50,  }}>
+                            <a href="/">
+                                <img src='/logo.svg' alt='logo' height="30"/>
+                            </a>
+                        </li>
 
                     {links.map(link => {
                         return (
-                            <Nav.Item style={{ height: 50, justifyContent: 'center'}} key={link.href} componentClass={NavLink} href={`/${link.href}`} icon={<Icon style={{color: 'black', fontSize: 30}} icon={link.icon}/>}>
+                            <li style={{ height: 50, justifyContent: 'center'}} key={link.href} href={`/${link.href}`}>
                                 {link.title}
-                            </Nav.Item>)
+                            </li>)
                     })}
                     </ul>
             </div>

@@ -1,0 +1,99 @@
+@mixin respond-to-min($width, $theme: base) {
+  $width: map-deep-fetch($breakpoints, $theme, $width) + 1;
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}
+// Generate font type from $font-types map
+@mixin font-type($group: base, $variant: regular, $properties: family weight style, $ft-map: $font-types) {
+  $font-properties: map-deep-fetch($ft-map, $group, $variant);
+  @if $font-properties {
+    @each $property, $values in $font-properties {
+      @if contains($properties, $property) {
+        font-#{$property}: map-get($font-properties, $property);
+      }
+    }
+  }
+}
+// Generate responsive font sizes from $font-sizes map
+@mixin font-size($keys...) {
+  $map: map-deep-fetch($font-sizes, $keys...);
+  $group: nth($keys, 1);
+  @each $fs-breakpoint, $fs-font-size in $map {
+    $size: nth($fs-font-size, 1);
+    $line-height: $size;
+    @if length($fs-font-size) > 1 {
+      $line-height: nth($fs-font-size, 2);
+    }
+    @if $fs-breakpoint == default {
+      font-size: t-rem($size);
+      line-height: t-rem($line-height);
+    }
+    @else {
+      @media screen and (min-width: map-deep-fetch($breakpoints, $group, $fs-breakpoint)) {
+        font-size: t-rem($size);
+        line-height: t-rem($line-height);
+      }
+    }
+  }
+}
+// Generate responsive spacing
+@mixin spacing($group, $res-sizes-map, $props...) {
+  @each $res-size, $key in $res-sizes-map {
+    @if $res-size == default {
+      @each $prop in $props {
+        #{$prop}: map-deep-fetch($spacing, $group, $key);
+      }
+    }
+    @else {
+      @media screen and (min-width: map-deep-fetch($breakpoints, $group, $res-size) + 1) {
+        @each $prop in $props {
+          #{$prop}: map-deep-fetch($spacing, $group, $key);
+        }
+      }
+    }
+  }
+}
+// functions to urlencode the svg string
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  @return $string;
+}
+@function url-encode($string) {
+  $map: (
+          "%": "%25",
+          "<": "%3C",
+          ">": "%3E",
+          " ": "%20",
+          "!": "%21",
+          "*": "%2A",
+          "'": "%27",
+          '"': "%22",
+          "(": "%28",
+          ")": "%29",
+          ";": "%3B",
+          ":": "%3A",
+          "@": "%40",
+          "&": "%26",
+          "=": "%3D",
+          "+": "%2B",
+          "$": "%24",
+          ",": "%2C",
+          "/": "%2F",
+          "?": "%3F",
+          "#": "%23",
+          "[": "%5B",
+          "]": "%5D"
+  );
+  $new: $string;
+  @each $search, $replace in $map {
+    $new: str-replace($new, $search, $replace);
+  }
+  @return $new;
+}
+@function inline-svg($string) {
+  @return url('data:image/svg+xml;charset=US-ASCII,#{url-encode($string)}');
+}

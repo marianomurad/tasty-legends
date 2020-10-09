@@ -1,0 +1,49 @@
+// (font-size, line-height)
+// if no line-height is defined defaults to font size
+$font-sizes: (
+
+  base:(
+    body: (
+      small:(
+        default: (14px, 28px)
+      ),
+      medium:(
+        default: (16px, 32px)
+      ),
+      large:(
+        default: (18px, 24px)
+      ),
+    ),
+    support: (
+      small: (
+        default: (9px, 18px)
+      ),
+      medium: (
+        default: (11px, 20px)
+      ),
+      large: (
+        default: (12px, 24px),
+      ),
+    ),
+    header: (
+      small: (
+        default: (24px, 28px)
+      ),
+      medium: (
+        default: (26px, 32px)
+      ),
+      large: (
+        default: (40px, 44px),
+      ),
+      sub: (
+        small: (
+          default: (20px, 32px)
+        ),
+        default: (22px, 40px),
+      )
+    )
+  )
+)
+
+
+

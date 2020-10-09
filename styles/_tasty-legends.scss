@@ -1,0 +1,10 @@
+@import './config';
+
+.#{$root} {
+  $theme: 'base';
+
+  @include font-type($theme);
+  @include font-size($theme, 'body');
+
+  @import "pages/homepage/main";
+}

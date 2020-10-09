@@ -1,5 +1,3 @@
-import React from 'react';
-import {Icon} from "rsuite";
 import { icons } from "../lib/utils/contact/helpers";
 
 const ContactSection = () => {
@@ -10,7 +8,11 @@ const ContactSection = () => {
     return (
         <div style={{backgroundColor: '#101010', width: '100%', display: 'flex', justifyContent: 'center', bottom: 0}}>
             {icons.map(icon =>
-                <Icon key={icon.name} style={{margin: 20, color: 'white'}} size="3x" icon={icon.name} onClick={() => handleClick(icon.url)}/>
+                <span
+                    key={icon.name}
+                    style={{margin: 20, color: 'white'}}
+                    onClick={() => handleClick(icon.url)}
+                />
             )}
         </div>
     );

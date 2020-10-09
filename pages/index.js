@@ -2,10 +2,9 @@ import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import HeroComponent from "../components/hero";
 import CardsComponent from "../components/cards/cards";
-import { Divider } from "rsuite";
 // import OpinionForm from "../components/opinion";
 // import ReviewsComponent from "../components/reviews";
-import ComboMakerComponent from "../components/combo/combomaker";
+// import ComboMakerComponent from "../components/combo/combomaker";
 import {ContentfulHelperStrings} from "../lib/utils/contentful/helpers";
 import {fetchByContentTypeFilterByProductType} from "./api/contentful/fetchAndFilterByProductType";
 import {fetchByContentType} from "./api/contentful/fetchByContentType";
@@ -41,16 +40,20 @@ function HomePage() {
     }, [])
 
     return (
-        <div style={{display: 'flex', justifyContent: 'space-around', flexDirection: 'column', alignItems: 'center', width: '100%'}}>
+        <div className="tasty-legends container">
+            <div className="c-main">
+
             <Head>
                 <title>Tasty Legends</title>
             </Head>
 
             <HeroComponent alt={hero?.fields?.file?.fileName} src={hero?.fields?.file?.url}/>
-            <Divider style={{ marginTop: 100}}>
-                <h2 style={{ color: '#101010'}}> Hamburguesas </h2>
-            </Divider>
-            <CardsComponent cards={burgers}/>
+            <div className="c-products">
+                <div className="c-products__divider">
+                    <h1 className="c-products__title"> Hamburguesas </h1>
+                </div>
+                <CardsComponent cards={burgers}/>
+            </div>
 
             {/*<Divider style={{ marginTop: 100}}>*/}
             {/*    <h2 style={{ color: '#101010'}}> Compra tu combo </h2>*/}
@@ -72,6 +75,7 @@ function HomePage() {
             {/*</Divider>*/}
             {/*<OpinionForm/>*/}
 
+            </div>
         </div>
     )
 }

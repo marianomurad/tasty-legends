@@ -1,0 +1,45 @@
+//
+//  Variables
+//  _____________________________________________
+
+$grid__columns: map-deep-fetch($grid, $theme, columns);
+
+// Default gutter & margin
+$grid__margin: map-deep-fetch($grid, $theme, margin, default);
+$grid__vertical-margin: map-deep-fetch($grid, $theme, vertical-margin, default);
+$grid__gutter: map-deep-fetch($grid, $theme, gutter, default);
+
+// Mobile first responsive margin & gutter overrides
+$grid__margin--X:  $grid__margin;
+$grid__margin--XS:  map-deep-fetch($grid, $theme, margin, XS);
+$grid__margin--S:  map-deep-fetch($grid, $theme, margin, S);
+$grid__margin--M:  map-deep-fetch($grid, $theme, margin, M);
+$grid__margin--L:  map-deep-fetch($grid, $theme, margin, L);
+$grid__margin--XL: map-deep-fetch($grid, $theme, margin, XL);
+
+// Mobile first responsive margin & gutter overrides
+$grid__vertical-margin--X:  $grid__vertical-margin;
+$grid__vertical-margin--XS:  map-deep-fetch($grid, $theme, vertical-margin, XS);
+$grid__vertical-margin--S:  map-deep-fetch($grid, $theme, vertical-margin, S);
+$grid__vertical-margin--M:  map-deep-fetch($grid, $theme, vertical-margin, M);
+$grid__vertical-margin--L:  map-deep-fetch($grid, $theme, vertical-margin, L);
+$grid__vertical-margin--XL: map-deep-fetch($grid, $theme, vertical-margin, XL);
+
+$grid__gutter--X:  $grid__gutter;
+$grid__gutter--XS:  map-deep-fetch($grid, $theme, gutter, XS);
+$grid__gutter--S:  map-deep-fetch($grid, $theme, gutter, S);
+$grid__gutter--M:  map-deep-fetch($grid, $theme, gutter, M);
+$grid__gutter--L:  map-deep-fetch($grid, $theme, gutter, L);
+$grid__gutter--XL: map-deep-fetch($grid, $theme, gutter, XL);
+
+$break--XS:  map-deep-fetch($grid, $theme, breakpoints, XS);
+$break--S:  map-deep-fetch($grid, $theme, breakpoints, S);
+$break--M:  map-deep-fetch($grid, $theme, breakpoints, M);
+$break--L:  map-deep-fetch($grid, $theme, breakpoints, L);
+$break--XL: map-deep-fetch($grid, $theme, breakpoints, XL);
+
+$screen--XS:  $break--XS + 1;
+$screen--S:  $break--S + 1;
+$screen--M:  $break--M + 1;
+$screen--L:  $break--L + 1;
+$screen--XL: $break--XL + 1;

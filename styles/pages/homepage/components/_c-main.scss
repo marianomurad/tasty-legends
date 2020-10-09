@@ -1,0 +1,8 @@
+.c-main{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  @include spacing($theme, (default: zero),'margin-top');
+  background-color: get-color($theme, 'background-grey');
+}

@@ -1,0 +1,46 @@
+$font-types: (
+  base: (
+          regular: (
+                  family: ('Open Sans', Arial, sans-serif),
+                  weight: normal,
+                  style: normal
+          ),
+          light: (
+            family: ('Open Sans', Arial, sans-serif),
+            weight: 300,
+            style: normal
+          ),
+          semibold: (
+            family: ('Open Sans', Arial, sans-serif),
+            weight: 600,
+            style: normal
+          ),
+          italic: (
+            family: ('Open Sans', Arial, sans-serif),
+            weight: normal,
+            style: italic
+          )
+  ),
+  dancing: (
+          regular: (
+                  family: ('Dancing Script', Arial, sans-serif),
+                  weight: normal,
+                  style: normal
+          ),
+          light: (
+                  family: ('Dancing Script', Arial, sans-serif),
+                  weight: 300,
+                  style: normal
+          ),
+          semibold: (
+                  family: ('Dancing Script', Arial, sans-serif),
+                  weight: 600,
+                  style: normal
+          ),
+          italic: (
+                  family: ('Dancing Script', Arial, sans-serif),
+                  weight: normal,
+                  style: italic
+          )
+  )
+)

@@ -1,0 +1,21 @@
+.c-hero{
+  background: get-color($theme, 'hero-black');
+
+  &__text {
+    @include font-type($theme, 'dancing', 'regular');
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+  }
+
+  &__image {
+    display: flex;
+    width: 100vw;
+    height: 35vw;
+    margin: 0;
+    object-fit: cover;
+  }
+}

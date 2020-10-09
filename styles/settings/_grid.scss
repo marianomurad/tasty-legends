@@ -1,0 +1,32 @@
+@import "breakpoints";
+
+$grid: (
+  base: (
+    columns: 12,
+    breakpoints: map-deep-fetch($breakpoints, 'base'),
+    margin: (
+      default: 24px,
+      XS: 24px,
+      S: 24px,
+      M: 24px,
+      L: 30px,
+      XL: 30px
+    ),
+    vertical-margin: (
+      default: 40px,
+      XS: 40px,
+      S: 40px,
+      M: 65px,
+      L: 74px,
+      XL: 80px
+    ),
+    gutter: (
+      default: 16px,
+      XS: 16px,
+      S: 16px,
+      M: 30px,
+      L: 30px,
+      XL: 30px
+    )
+  ),
+);

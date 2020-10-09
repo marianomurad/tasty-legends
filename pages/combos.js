@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from "next/head";
-import { Row, Col, Panel } from "rsuite";
 
 
 const Combos = () => {
@@ -31,28 +30,13 @@ const Combos = () => {
                     </div>
                 </li>
             </ul>
-            <Row>
-                <Col md={6} sm={12}>
-                    <Panel  collapsible bordered header="Card title">
+            <div>
+                <div>
+                    <div  collapsible bordered header="Card title">
                         <p>asdasd</p>
-                    </Panel>
-                </Col>
-                <Col md={6} sm={12}>
-                    <Panel  bordered header="Card title">
-                        <p>asdasd</p>
-                    </Panel>
-                </Col>
-                <Col md={6} sm={12}>
-                    <Panel  bordered header="Card title">
-                        <p>asdasd</p>
-                    </Panel>
-                </Col>
-                <Col md={6} sm={12}>
-                    <Panel bordered header="Card title">
-                        <p>asdasd</p>
-                    </Panel>
-                </Col>
-            </Row>
+                    </div>
+                </div>
+            </div>
         </div>
         </>
     );

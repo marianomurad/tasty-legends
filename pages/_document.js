@@ -11,7 +11,7 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
-                    <link href="https://fonts.google.com/specimen/Open+Sans" rel="stylesheet" />
+                    <link href="https://fonts.google.com/specimen/Open+Sans#standard-styles" rel="stylesheet" />
                 </Head>
                 <body>
                 <Main />
