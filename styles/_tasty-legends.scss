@@ -7,4 +7,5 @@
   @include font-size($theme, 'body');
 
   @import "pages/homepage/main";
+  @import "pages/common/main";
 }

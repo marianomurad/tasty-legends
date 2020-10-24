@@ -2,7 +2,7 @@
   background: get-color($theme, 'hero-black');
 
   &__text {
-    @include font-type($theme, 'dancing', 'regular');
+    @include font-type($theme, 'dancing');
     color: white;
     font-size: 50px;
     position: absolute;

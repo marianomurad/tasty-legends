@@ -1,16 +1,16 @@
 import { icons } from "../lib/utils/contact/helpers";
 
-const ContactSection = () => {
+const FooterSection = () => {
 
     const handleClick = (url) => {
         document.location.href = url || '';
     }
     return (
-        <div style={{backgroundColor: '#101010', width: '100%', display: 'flex', justifyContent: 'center', bottom: 0}}>
+        <div className="c-footer">
             {icons.map(icon =>
                 <span
                     key={icon.name}
-                    style={{margin: 20, color: 'white'}}
+                    className="c-footer__icon"
                     onClick={() => handleClick(icon.url)}
                 />
             )}
@@ -18,4 +18,4 @@ const ContactSection = () => {
     );
 };
 
-export default ContactSection;
+export default FooterSection;

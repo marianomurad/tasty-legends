@@ -1,8 +1,9 @@
-import Navigation from "../components/navigation/navigation";
-import App from "next/app";
-import {StateProvider} from "../lib/store";
-import '../styles/main.scss'
+import Navigation from '../components/navigation/navigation';
+import {StateProvider} from '../lib/store';
 import '../styles/layout/grid/grid.base.scss'
+import '../styles/fonts/_fonts.base.scss'
+import '../styles/main.scss'
+import App from 'next/app';
 
 export default class MyApp extends App {
 

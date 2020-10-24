@@ -36,6 +36,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      &__secondary {
+        background-color: get-color($theme, 'brand-button');
+      }
     }
   }
 
@@ -52,11 +55,18 @@
 
   &__c-card-main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
     @include spacing($theme, (default: xxsmall),'padding-right');
     @include spacing($theme, (default: xxsmall),'padding-top');
     border-top: 1px solid get-color($theme, 'medium-grey');
+  }
+  &__c-card-btn-group {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    @include spacing($theme, (default: xxsmall),'margin-top');
   }
 }

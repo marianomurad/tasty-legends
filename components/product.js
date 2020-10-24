@@ -1,24 +1,19 @@
-import React from "react";
 
-function Product({ name, price, image, url, ingredients }) {
+function Product({ name, price, image, ingredients }) {
+    console.log(ingredients.toString());
     return (
         <div className="container">
-            <a href={url}>
+            <a>
                 <img alt={name} src={image.toString()} height="400" width="380"/>
             </a>
             <div className="text">
                 <h2>{name}</h2>
                 <h4>{price} $</h4>
-                <p>{ingredients}</p>
+                <p style={{textWrap: 'wrap'}}>{ingredients}</p>
                 <button> Comprar</button>
 
             </div>
             <style jsx>{`
-        .container {
-          cursor: pointer;
-          height: 453px;
-          margin-bottom: 48px;
-        }
         a {
           border-bottom: none;
         }

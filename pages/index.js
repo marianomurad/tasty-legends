@@ -40,7 +40,6 @@ function HomePage() {
     }, [])
 
     return (
-        <div className="tasty-legends container">
             <div className="c-main">
 
             <Head>
@@ -76,7 +75,6 @@ function HomePage() {
             {/*<OpinionForm/>*/}
 
             </div>
-        </div>
     )
 }
 
